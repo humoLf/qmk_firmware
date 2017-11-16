@@ -30,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Qwerty
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |    1   |   2  |   3  |   4  |   5  |  6   | F13  |           |  ^   |   7  |   8  |   9  |   0  |  -   |   \|    |
+ * |    1   |   2  |   3  |   4  |   5  |  6   | Z/H  |           |  ^   |   7  |   8  |   9  |   0  |  -   |   \|    |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | Tab    |   Q  |   W  |   E  |   R  |   T  | Home |           | PgUp |   Y  |   U  |   I  |   O  |  P   |   @    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------| End  |           | PgDn |------+------+------+------+------+--------|
  * | Ctrl   | Z/Mo |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |  /   | Ctrl   |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |  Alt |      |  CUT | COPY | PASTE |                                      |  [   |  ]   |   :  |  \_  | Alt  |
+ *   |  Alt | PScrn|  CUT | COPY | PASTE |                                      |  [   |  ]   |   :  |  \_  | Alt  |
  *   `-----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        | GUI  | L1   |       | Left |Right |
@@ -50,11 +50,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [BASE] = LAYOUT_ergodox(  // layer 0 : default
         // left hand
-        KC_1,       KC_2,       KC_3,   KC_4,   KC_5,   KC_6,   KC_F13,
+        KC_1,       KC_2,       KC_3,   KC_4,   KC_5,   KC_6,   KC_ZKHK,
         KC_TAB,     KC_Q,       KC_W,   KC_E,   KC_R,   KC_T,   KC_HOME,
         KC_LSFT,    KC_A,       KC_S,   KC_D,   KC_F,   KC_G,
         KC_LCTL,    KC_Z,	    KC_X,   KC_C,   KC_V,   KC_B,   KC_END,
-        KC_LALT,	KC_NO, LCTL(KC_X), LCTL(KC_C), LCTL(KC_V),
+        KC_LALT, KC_PSCR, LCTL(KC_X), LCTL(KC_C), LCTL(KC_V),
                                                       KC_LGUI,TG(SYMB),
                                                               TG(MDIA),
                                               KC_SPC, KC_DEL, KC_ESC,
@@ -96,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS,KC_TRNS,KC_TRNS,  KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
        KC_TRNS,KC_TRNS,KC_TRNS, KC_TRNS,KC_TRNS,KC_TRNS,
        KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
-          EPRM,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
+       KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
                                        KC_TRNS,KC_TRNS,
                                                KC_TRNS,
                                KC_TRNS,KC_TRNS,KC_TRNS,
@@ -126,8 +126,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        ,-------------.       ,-------------.
  *                                        |      |      |       | Prev | Next |
  *                                 ,------|------|------|       |------+------+------.
- *                                 |      |      |      |       |      |Brwser|      |
- *                                 | Lclk | Rclk |------|       |------|Back  |      |
+ *                                 |      |      |      |       |      |      |      |
+ *                                 | Lclk | Rclk |------|       |------|      |      |
  *                                 |      |      |      |       |      |      |      |
  *                                 `--------------------'       `--------------------'
  */
@@ -149,7 +149,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           KC_VOLU, KC_VOLD, KC_MUTE, KC_TRNS, KC_TRNS,
        KC_MPRV, KC_MNXT,
        KC_TRNS,
-       KC_TRNS, KC_WBAK, KC_TRNS
+       KC_TRNS, KC_TRNS, KC_TRNS
 ),
 };
 
